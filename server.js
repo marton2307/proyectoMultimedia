@@ -21,7 +21,7 @@ app.get('/image', (req, res) => {
             res.send(data);
         })
         .catch(err => {
-            res.status(500).send('Error procesando la imagen');
+            res.status(500).send('Error no hay imagen');
         });
 });
 
@@ -33,7 +33,7 @@ app.get('/audio', (req, res) => {
         .toFormat('wav')
         .pipe(res)
         .on('error', (err) => {
-            res.status(500).send('Error procesando el audio');
+            res.status(500).send('Error de audio');
         });
 });
 
